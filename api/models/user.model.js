@@ -1,4 +1,4 @@
-import { Mongoose } from "mongoose";
+import Mongoose from "mongoose";
 const userSchema = new Mongoose.Schema({
     username: {
         type: String,
@@ -11,15 +11,13 @@ const userSchema = new Mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        trim: true,
         minlength: 3
     },
     password: {
         type: String,
         required: true,
         unique: false,
-        trim: true,
-        minlength: 3
+        minlength: 5
     }, 
     },{
         timestamps: true});
